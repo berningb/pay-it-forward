@@ -3,6 +3,20 @@ var express = require('express'),
     expressSession = require('express-session'),
     app = express(),
     path = require('path');
+var jade = require('jade');
+var bodyParser = require('body-parser');
+
+
+
+
+app.set('view engine', 'jade');
+app.set('views', __dirname + '/views');
+app.use(express.static(path.join(__dirname + '/public')));
+
+
+var urlencodedParser = bodyParser.urlencoded({
+    extended: false
+})
 
 // viewed at http://localhost:8080
 app.get('/', function (req, res) {
