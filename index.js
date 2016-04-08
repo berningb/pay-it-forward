@@ -9,6 +9,10 @@ var express = require('express'),
         extended: false
     });
 
+
+app.use("/", express.static(__dirname + '/public'));
+
+
 // viewed at http://localhost:8080
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
@@ -32,13 +36,22 @@ app.get('/location', function (req, res) {
 app.get('/location', function (req, res) {
     res.sendFile(path.join(__dirname + '/events.html'));
 });
+// viewed at http://localhost:8080/events
+app.get('/completed', function (req, res) {
+    res.sendFile(path.join(__dirname + '/completed.html'));
+});
 
-app.post('/', urlencodedParser, function (req, res) {
+app.post('/', urlParser, function (req, res) {
     var Name = req.body.name;
     var Email = req.body.email;
     var Phone = req.body.phone;
-    res.send('Hello ' + name + " " + " " + email + " " +
-        phone);
+    var Food = req.body.food;
+    var guests = [];
+//    for (i = 0; i = < req.body.guests; i++) {
+//
+//    }
+    console.log("Hello" + Name + Email + Phone + Food);
+    res.redirect("../completed");
 });
 
 

@@ -23,19 +23,22 @@
                     <h4 class="modal-title">RSVP</h4>
                 </div>
                 <div class="modal-body">
-                    <form action="/" id="rsvpform">
+                    <form action="/" id="rsvpform" method="post">
                         <fieldset class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="First Last" required>
+                            <input type="text" class="form-control" id="name" placeholder="First Last" name="name">
                         </fieldset>
                         <fieldset class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
-                            <small class="text-muted">We'll never share your email with anyone else.</small>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="phone" class="form-control" id="phone" placeholder="(888)-555-5555" name="phone">
                         </fieldset>
                         <fieldset class="form-group">
                             <label for="guests">Number of Guests</label>
-                            <select class="form-control" id="guests">
+                            <select class="form-control" id="guests" name="guests">
                                 <option>0</option>
                                 <option>1</option>
                                 <option>2</option>
@@ -45,13 +48,14 @@
                         </fieldset>
                         <fieldset class="form-group">
                             <label for="food">Food Choice</label>
-                            <select class="form-control" id="food">
+                            <select class="form-control" id="food" name="food">
                                 <option>Food 1</option>
                                 <option>Food 2</option>
                                 <option>Food 3</option>
                             </select>
-                            <fieldset class="form-group" id="guestsfood">
-                            </fieldset>
+
+                        </fieldset>
+                        <fieldset class="form-group" id="guestsfood">
                         </fieldset>
                     </form>
                 </div>
