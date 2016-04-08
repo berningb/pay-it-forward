@@ -13,27 +13,34 @@ var express = require('express'),
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
+
 // viewed at http://localhost:8080/login
 app.get('/login', function (req, res) {
     res.sendFile(path.join(__dirname + '/login.html'));
 });
 app.post('/login', urlParser, function (req, res) {
-    console.log(hasher.verify(req.body.login, req.body.password));
+    if (hasher.verify(req.body.login, req.body.password)) {
+        res.redirect('/admin');
+    } else {
+        res.sendFile(path.join(__dirname + '/login.html'));
+    }
 });
+
 // viewed at http://localhost:8080/admin
 app.get('/admin', function (req, res) {
     res.sendFile(path.join(__dirname + '/admin.html'));
+    var h = hasher.rvspInfo();
+    res.send(h);
 });
+
 // viewed at http://localhost:8080/location
 app.get('/location', function (req, res) {
     res.sendFile(path.join(__dirname + '/location.html'));
 });
+
 // viewed at http://localhost:8080/events
 app.get('/location', function (req, res) {
     res.sendFile(path.join(__dirname + '/events.html'));
 });
-
-
-
 
 app.listen(8080);
