@@ -39,6 +39,13 @@ app.get('/location', function (req, res) {
     res.sendFile(path.join(__dirname + '/events.html'))
 });
 
+app.post('/', urlencodedParser, function (req, res) {
+    var Name = req.body.name;
+    var Email = req.body.email;
+    var Phone = req.body.phone;
+    res.send('Hello ' + name + " " + " " + email + " " +
+        phone);
+});
 
 
 
