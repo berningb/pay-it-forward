@@ -1,15 +1,14 @@
 var crypto = require('crypto'),
     fs = require('fs');
-var admin = {
-    pass: "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
-    user: "reunion"
+var user = {
+    name: "reunion",
+    pass: "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"
 };
+
 exports.verify = function (name, password) {
-    var m = crypto.createHash('sha256').update(password).digest('hex');
-    return (name === admin.user && m === admin.pass);
+    var p = crypto.createHash('sha256').update(password).digest('hex');
+    return (name === user.name && p === user.pass);
 };
 exports.rvspInfo = function () {
-    var j = fs.readFileSync("./rvsp.json"),
-        m = JSON.parse(j);
-    return m;
+    return JSON.parse(fs.readFileSync('./rvsp.json'));
 };
