@@ -4,10 +4,12 @@ var express = require('express'),
     expressSession = require('express-session'),
     app = express(),
     path = require('path'),
-    hasher = require('/hash.js'),
+    //    hasher = require('hash.js'),   
     urlParser = bodyParser.urlencoded({
         extended: false
     });
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // viewed at http://localhost:8080
 app.get('/', function (req, res) {
@@ -17,13 +19,13 @@ app.get('/', function (req, res) {
 app.get('/login', function (req, res) {
     res.sendFile(path.join(__dirname + '/login.html'));
 });
-app.post('/login', urlParser, function (req, res) {
-    if (hasher.verify(req.body.login, req.body.password)) {
-        res.redirect('/admin');
-    } else {
-        res.sendFile(path.join(__dirname + '/login.html'));
-    }
-});
+//app.post('/login', urlParser, function (req, res) {
+//    if (hasher.verify(req.body.login, req.body.password)) {
+//        res.redirect('/admin');
+//    } else {
+//        res.sendFile(path.join(__dirname + '/login.html'));
+//    }
+//});
 // viewed at http://localhost:8080/admin
 app.get('/admin', function (req, res) {
     res.sendFile(path.join(__dirname + '/admin.html'));
