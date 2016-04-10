@@ -35,9 +35,15 @@ app.get('/location', function (req, res) {
     res.sendFile(path.join(__dirname + '/location.html'));
 });
 // viewed at http://localhost:8080/events
-app.get('/location', function (req, res) {
-    res.sendFile(path.join(__dirname + '/events.html'));
+app.get('/completed', function (req, res) {
+    res.sendFile(path.join(__dirname + '/completed.html'));
 });
+
+app.post('/', function (req, res) {
+    //    var formData = JSON.stringify(document.getElementById("rsvpform").serializeArray());
+    //    console.log(formData);
+    res.redirect("/")
+})
 
 
 
