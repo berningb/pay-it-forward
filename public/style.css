@@ -1,3 +1,48 @@
-body{
-	background-color: white;
+body {
+    background-color: white;
+}
+
+#googlemap {
+    float: right;
+    position: relative;
+}
+
+.jumbotron {
+    float: right;
+    width: 100%;
+}
+
+.google-maps {
+    position: relative;
+    padding: 0;
+    padding-bottom: 30%;
+    height: 0;
+    max-height: 600px;
+    min-width: 400px;
+    min-height: 500px;
+    margin-bottom: 10px;
+}
+
+.google-maps iframe {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    min-width: 400px;
+    min-height: 500px;
+    margin: auto;
+}
+
+#loctext {
+    position: relative;
+    height: auto;
+    font-size: 2.3em;
+    min-width: 400px;
+}
+
+#success {
+    font-size: 3em;
+    text-align: center;
 }
