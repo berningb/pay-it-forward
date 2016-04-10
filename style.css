@@ -1,0 +1,14 @@
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {}
+
+#navigation {
+    position: relative;
+    margin-bottom: 50px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+}
