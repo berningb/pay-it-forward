@@ -22,6 +22,7 @@ body {
 }
 
 #rights {
+    font-family: Sans-Serif;
     width: 200px;
     float: right;
     text-align: right;
@@ -244,7 +245,8 @@ footer {
 #menubtn {
     display: inline-block;
     vertical-align: middle;
-    background-color: white;
+    background-color: #146335;
+    color: white;
     border-radius: 100px;
     height: 130px;
     width: 130px;
