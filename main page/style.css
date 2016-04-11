@@ -21,7 +21,13 @@ body {
     background-position: center;
 }
 
+<<<<<<< HEAD
 #rights {width: 200px;
+=======
+#rights {
+    font-family: Sans-Serif;
+    width: 200px;
+>>>>>>> 332d416fd4f47009254b4343fab95cf3de06c94b
     float: right;
     text-align: right;
     position: relative;
@@ -119,7 +125,7 @@ body {
 .button {
     text-decoration: none;
     position: relative;
-    top: -850px;
+    top: -750px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -135,6 +141,11 @@ body {
 
 .button:hover {
     text-decoration: none;
+}
+
+.nav1 {
+    text-align: center;
+    line-height: 130px;
 }
 
 nav {
@@ -275,4 +286,19 @@ footer {
     nav {
         width: 60%;
     }
+}
+
+#menubtn {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #146335;
+    color: white;
+    border-radius: 100px;
+    height: 130px;
+    width: 130px;
+    box-shadow: 0px 4px 4px #111;
+}
+
+#menubtn:hover {
+    box-shadow: 0px 2px 2px #aaa;
 }

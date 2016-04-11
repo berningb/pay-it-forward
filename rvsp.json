@@ -1,3 +1,1 @@
-{
-    "test": "dumby data"
-}
+{"rvsp":[{"rvspName":"brandon","rvspEmail":"b@b.com","rvspPhone":"123-456-7890","rvspGuests":"1","rvspFood":["Food 3","Food 1",""]},{"rvspName":"cody","rvspEmail":"c@c.com","rvspPhone":"123-456-9870","rvspGuests":"2","rvspFood":["Food 2","Food 3","Food 1"]},{"rvspName":"Cody","rvspEmail":"c@c.com","rvspPhone":"11111111111","rvspGuests":"0","rvspFood":["Food 2","",""]}]}
