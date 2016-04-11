@@ -13,7 +13,7 @@ body {
 
 .header {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background: url("images/dog.jpg") no-repeat;
     background-size: cover;
     margin: 0 auto;
@@ -25,13 +25,15 @@ body {
     float: right;
     text-align: right;
     position: relative;
-    top: 480px;
+    top: 430px;
     left: 850px;
     color: black;
     font-size: .6em;
 }
 
 .header-title {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -40,9 +42,10 @@ body {
     text-align: center;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 55%;
     border: 3px solid;
     border-top: none;
+    background-color: rgba(204, 204, 204, .7);
 }
 
 .header-title h1,
@@ -51,7 +54,7 @@ body {
 }
 
 .header-title h1 {
-    font-size: 3.5em;
+    font-size: 5.5em;
     text-transform: uppercase;
 }
 
@@ -60,7 +63,7 @@ body {
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
     font-style: oblique;
-    font-size: 1.5em;
+    font-size: 3.5em;
     overflow: hidden;
     margin: -30px -33px 0 -33px;
     position: absolute;
@@ -89,7 +92,8 @@ body {
 }
 
 .txt-red {
-    color: #F44336;
+    color: #1F3F1C;
+    font-family: 'Bevan', cursive;
 }
 
 .container {
@@ -115,11 +119,12 @@ body {
 .button {
     text-decoration: none;
     position: relative;
-    top: -800px;
+    top: -850px;
     text-align: center;
     display: flex;
     align-items: center;
     font-size: 2.5em;
+    color: #1F3F1C;
     -webkit-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
     -moz-transition: all 0.3s linear;
@@ -130,10 +135,6 @@ body {
 
 .button:hover {
     text-decoration: none;
-}
-
-#barz {
-    margin: auto;
 }
 
 nav {
@@ -160,15 +161,17 @@ nav li {
     display: block;
     padding: 10px 20px;
     border-bottom: 1px solid #eeeeee;
+    font-size: 2em;
 }
 
 nav a {
+    color: #666;
     text-decoration: none;
-    color: #666
 }
 
 nav ul li:hover {
-    background-color: #03A9F4;
+    text-decoration: none;
+    background-color: #1F3F1C;
     color: #fff;
 }
 
@@ -192,7 +195,7 @@ nav i {
 .logo-head {
     width: 100%;
     height: 50px;
-    background-color: #F44336;
+    background-color: #1F3F1C;
     padding-top: 150px;
 }
 
@@ -207,7 +210,7 @@ nav i {
 footer {
     height: 200px;
     width: 100%;
-    background-color: darkgray;
+    background-color: #404042;
 }
 
 .video {
@@ -216,7 +219,7 @@ footer {
 
 .text {
     height: 800px;
-    background-color: #2196F3;
+    background-color: #1F3F1C;
     /*    position: relative;*/
     /*    top: -21px;*/
 }
