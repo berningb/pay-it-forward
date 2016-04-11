@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto', Open sans, Helvetica, Arial, sans-serif;
+    text-decoration: none;
 }
 
 .full {
@@ -169,14 +170,18 @@ nav a {
     text-decoration: none;
 }
 
-nav ul li:hover {
+nav a:hover {
     text-decoration: none;
+}
+
+nav ul li:hover {
     background-color: #1F3F1C;
     color: #fff;
 }
 
 nav ul li:active {
     background-color: #F44336;
+    text-decoration: none;
 }
 
 nav:target {
@@ -223,8 +228,6 @@ footer {
     /*    position: relative;*/
     /*    top: -21px;*/
 }
-
-
 /* END NAVIGATION*/
 
 @media screen and (max-width: 600px) {
