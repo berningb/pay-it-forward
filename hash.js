@@ -1,8 +1,8 @@
-var crypto = require('crypto'),
-    fs = require('fs');
+var crypto = require('crypto')
+    , fs = require('fs');
 var user = {
-    name: "reunion",
-    pass: "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"
+    name: "reunion"
+    , pass: "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"
 };
 
 exports.verify = function (name, password) {
@@ -11,4 +11,7 @@ exports.verify = function (name, password) {
 };
 exports.rvspInfo = function () {
     return JSON.parse(fs.readFileSync('./rvsp.json'));
+};
+exports.rvspAccepted = function (name, email, phone, guests, food) {
+    console.log(name + " : " + email + " : " + phone + " : " + guests + " : " + food);
 };
