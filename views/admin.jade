@@ -1,6 +1,26 @@
 doctype
 html
      head
-          h1 RVSP Info
+          
      body
-          p #{rvsp}
+          div
+            h1 RVSP Info
+            table  
+                thead
+                    tr
+                        th Name
+                        th Email
+                        th Phone
+                        th Guests
+                        th RVSP Person Food Choice
+                        th 1st Guest Food Choice
+                        th 2nd Guest Food Choice
+                tbody
+                    each r in rvsp.rvsp
+                        tr
+                            td #{r.rvspName}
+                            td #{r.rvspEmail}
+                            td #{r.rvspPhone}
+                            td #{r.rvspGuests}
+                            each f in r.rvspFood
+                                td #{f}                    

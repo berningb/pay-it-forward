@@ -1,12 +1,12 @@
 "use strict";
-var express = require('express'),
-    bodyParser = require('body-parser'),
-    expressSession = require('express-session'),
-    app = express(),
-    jade = require('jade'),
-    path = require('path'),
-    hasher = require('./hash.js'),
-    urlParser = bodyParser.urlencoded({
+var express = require('express')
+    , bodyParser = require('body-parser')
+    , expressSession = require('express-session')
+    , app = express()
+    , jade = require('jade')
+    , path = require('path')
+    , hasher = require('./hash.js')
+    , urlParser = bodyParser.urlencoded({
         extended: false
     });
 app.set('view engine', 'jade');
@@ -52,11 +52,7 @@ app.post('/', urlParser, function (req, res) {
     if (req.body.guest1 != null) {
         guest2 = req.body.guest1;
     }
-    console.log(guest1 + guest2);
-    //    var formData = JSON.stringify(document.getElementById("rsvpform").serializeArray());
-    //    console.log(formData);
-app.post('/', urlParser, function (req, res) {
-    hasher.rvspAccepted(req.body.name, req.body.email, req.body.phone, req.body.guests, req.body.food);
+    hasher.rvspAccepted(req.body.name, req.body.email, req.body.phone, req.body.guests, req.body.food, guest1, guest2);
     res.redirect("/")
 });
 
