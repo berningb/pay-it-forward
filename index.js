@@ -5,7 +5,7 @@ var express = require('express'),
     app = express(),
     jade = require('jade'),
     path = require('path'),
-    hasher = require('./hash.js'),   
+    hasher = require('./hash.js'),
     urlParser = bodyParser.urlencoded({
         extended: false
     });
@@ -30,7 +30,9 @@ app.post('/login', urlParser, function (req, res) {
 });
 // viewed at http://localhost:8080/admin
 app.get('/admin', function (req, res) {
-    res.render('admin', {test: hasher.rvspInfo()});
+    res.render('admin', {
+        test: hasher.rvspInfo()
+    });
 });
 // viewed at http://localhost:8080/location
 app.get('/location', function (req, res) {
@@ -41,7 +43,16 @@ app.get('/completed', function (req, res) {
     res.sendFile(path.join(__dirname + '/completed.html'));
 });
 
-app.post('/', function (req, res) {
+app.post('/', urlParser, function (req, res) {
+    var guest1 = "";
+    var guest2 = "";
+    if (req.body.guest0 != null) {
+        guest1 = req.body.guest0;
+    }
+    if (req.body.guest1 != null) {
+        guest2 = req.body.guest1;
+    }
+    console.log(guest1 + guest2);
     //    var formData = JSON.stringify(document.getElementById("rsvpform").serializeArray());
     //    console.log(formData);
     res.redirect("/")
