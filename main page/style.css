@@ -15,14 +15,13 @@ body {
 .header {
     width: 100%;
     height: 90vh;
-    background: url("images/dog.jpg") no-repeat;
+    background-image: url(images/dog.jpg);
     background-size: cover;
     margin: 0 auto;
     background-position: center;
 }
 
-#rights {
-    width: 200px;
+#rights {width: 200px;
     float: right;
     text-align: right;
     position: relative;
@@ -175,7 +174,7 @@ nav a:hover {
 }
 
 nav ul li:hover {
-    background-color: #1F3F1C;
+    background-color: #666;
     color: #fff;
 }
 
@@ -220,14 +219,56 @@ footer {
 
 .video {
     height: 800px;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    background-image: url(images/Untitled-1.png);
 }
 
 .text {
     height: 800px;
     background-color: #1F3F1C;
-    /*    position: relative;*/
-    /*    top: -21px;*/
+    color: white;
 }
+
+#textHold {
+    display: table;
+    height: 300px;
+    margin-top: 50px;
+}
+
+#everything {
+    height: 400px;
+    width: 100%;
+    padding-top: 60px;
+}
+
+#theVid {
+    margin: auto;
+    height: 535px;
+    width: 780px;
+    margin-top: 142px;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+
+#head {
+    height: 50px;
+    text-align: center;
+    font-size: 1.6em;
+    width: 200px;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.text p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
 /* END NAVIGATION*/
 
 @media screen and (max-width: 600px) {

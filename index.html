@@ -7,69 +7,143 @@
     <title></title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-        RSVP HERE
-    </button>
-    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title">RSVP</h4>
-                </div>
-                <div class="modal-body">
-                    <form action="/" id="rsvpform" method="post">
-                        <fieldset class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="First Last" name="name">
-                        </fieldset>
-                        <fieldset class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                        </fieldset>
-                        <fieldset class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="phone" class="form-control" id="phone" placeholder="(888)-555-5555" name="phone">
-                        </fieldset>
-                        <fieldset class="form-group">
-                            <label for="guests">Number of Guests</label>
-                            <select class="form-control" id="guests" name="guests">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
-                        </fieldset>
-                        <fieldset class="form-group">
-                            <label for="food">Food Choice</label>
-                            <select class="form-control" id="food" name="food">
-                                <option>Food 1</option>
-                                <option>Food 2</option>
-                                <option>Food 3</option>
-                            </select>
 
-                        </fieldset>
-                        <fieldset class="form-group" id="guestsfood">
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="rsvpbtn">SUBMIT</button>
-                </div>
 
-            </div>
-            <!-- /.modal-content -->
+    <nav id="slideLeft">
+        <div class="logo-head">
         </div>
-        <!-- /.modal-dialog -->
+        <ul>
+            <a href="#!">
+                <li><i class="fa fa-home"></i> Home</li>
+            </a>
+            <a href="#!">
+                <li><i class="fa fa-info-circle"></i> About</li>
+            </a>
+            <a href="#!">
+                <li> <i class="fa fa-child"></i> Events</li>
+            </a>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="containerOverlay">
+            <a href="#!"></a>
+        </div>
+        <div class="nav1">
+            <a href="#slideLeft" class="button">
+                    Menu
+            </a>
+        </div>
     </div>
-    <!-- /.modal -->
+
+    <header>
+        <div class="full header txt-red">
+            <div class="header-title">
+                <h2>Hillcrest High</h2>
+                <h1>50 YEAR REUNION</h1>
+            </div>
+            <div id="rights">photo by Alisson Douglas</div>
+        </div>
+    </header>
+
+
+    <div class="container-fluid con">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8  video">
+                <div id="theVid">
+                    <iframe width="760" height="515" src="https://www.youtube.com/embed/khB1Q_531qQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4   text">
+                <div id="everything">
+                    <div id="head">
+                        <div class="page-header">50 YEARS</div>
+                    </div>
+                    <div id="textHold">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                        RSVP HERE
+                    </button>
+                    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title">RSVP</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="/" id="rsvpform" method="post">
+                                        <fieldset class="form-group">
+                                            <label for="name">Name</label>
+                                            <input type="text" class="form-control" id="name" placeholder="First Last" name="name">
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            <label for="email">Email Address</label>
+                                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            <label for="phone">Phone</label>
+                                            <input type="phone" class="form-control" id="phone" placeholder="(888)-555-5555" name="phone">
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            <label for="guests">Number of Guests</label>
+                                            <select class="form-control" id="guests" name="guests">
+                                                <option>0</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            <label for="food">Food Choice</label>
+                                            <select class="form-control" id="food" name="food">
+                                                <option>Food 1</option>
+                                                <option>Food 2</option>
+                                                <option>Food 3</option>
+                                            </select>
+
+                                        </fieldset>
+                                        <fieldset class="form-group" id="guestsfood">
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" id="rsvpbtn">SUBMIT</button>
+                                </div>
+
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <!-- /.modal -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+
+
+
+
+
+
+
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
