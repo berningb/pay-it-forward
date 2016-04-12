@@ -66,8 +66,8 @@ app.get('/completed', function (req, res) {
 });
 
 app.post('/', urlParser, function (req, res) {
-    var guest1 = "";
-    var guest2 = "";
+    var guest1 = "NA";
+    var guest2 = "NA";
     if (req.body.guest0 != null) {
         guest1 = req.body.guest0;
     }
