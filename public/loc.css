@@ -1,0 +1,42 @@
+.header {
+    background-image: url(images/utah.jpg);
+}
+
+.header-title {
+    color: white;
+}
+
+#theVid {
+    margin: auto;
+    height: 620px;
+    width: 820px;
+    margin-top: 142px;
+    border: 10px solid white;
+    border-radius: 10px;
+}
+
+.video {
+    height: 800px;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    background-image: none;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    background-color: black;
+}
+
+.page-header {
+    font-size: 5em;
+}
+
+#flower {
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+}
+
+#textHold {
+    font-size: 1.5em;
+}

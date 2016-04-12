@@ -58,8 +58,6 @@ body {
     margin: auto;
     margin-top: 50px;
 }
-
-
 /***************************************************/
 
 body {
@@ -121,7 +119,7 @@ body {
 }
 
 .header-title h1 {
-    font-size: 5.5em;
+    font-size: 5em;
     text-transform: uppercase;
 }
 
@@ -351,8 +349,6 @@ footer {
     margin: auto;
     text-align: center;
 }
-
-
 /* END NAVIGATION*/
 
 @media screen and (max-width: 600px) {
@@ -417,5 +413,5 @@ footer {
 
 form {
     color: black;
-     text-align: left;
+    text-align: left;
 }
