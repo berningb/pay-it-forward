@@ -2,19 +2,6 @@
     background-image: url(images/utah.jpg);
 }
 
-.header-title {
-    color: white;
-}
-
-#theVid {
-    margin: auto;
-    height: 620px;
-    width: 820px;
-    margin-top: 142px;
-    border: 10px solid white;
-    border-radius: 10px;
-}
-
 .video {
     height: 800px;
     vertical-align: middle;
@@ -23,7 +10,7 @@
     background-image: none;
     border-right: 4px solid black;
     border-bottom: 4px solid black;
-    background-color: black;
+    background-color: white;
 }
 
 .page-header {
