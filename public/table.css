@@ -37,3 +37,26 @@ body {
     text-align: center;
     color: white;
 }
+
+.remove {
+    text-decoration: none;
+    color: black;
+}
+
+.remove:hover {
+    font-size: 18px;
+    background-color: #e74c3c;
+    color: white;
+}
+
+.logout {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: sans-serif;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+}
