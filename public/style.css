@@ -417,3 +417,7 @@ nav li {
     border: none;
     border-radius: 0px;
 }
+
+video {
+    background-color: black;
+}
