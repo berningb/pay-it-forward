@@ -56,7 +56,8 @@ body {
 
 #rsvp {
     margin: auto;
-    margin-top: 50px;
+    margin-top: 620px;
+    z-index: 1000;
 }
 /***************************************************/
 
@@ -205,75 +206,9 @@ body {
     text-decoration: none;
 }
 
-nav li {
-    display: block;
-    border-bottom: 1px solid #eeeeee;
-    font-size: 2em;
-}
-
 .navbar {
     margin-bottom: 0px;
 }
-/*
-nav {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    -webkit-transition: -webkit-transform 0.5s;
-    -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    width: 400px;
-    background: #fff;
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav li {
-    display: block;
-    padding: 10px 20px;
-    border-bottom: 1px solid #eeeeee;
-    font-size: 2em;
-}
-
-nav a {
-    color: #666;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: none;
-}
-
-nav ul li:hover {
-    background-color: #666;
-    color: #fff;
-}
-
-nav ul li:active {
-    background-color: #F44336;
-    text-decoration: none;
-}
-
-nav:target {
-    z-index: 4;
-    -webkit-transform: translate3d(0, 0, 0);
-}
-
-nav:target ~ .container .containerOverlay {
-    display: block;
-}
-
-nav i {
-    margin-right: 5px;
-}
-*/
 
 .logo-head {
     width: 100%;
@@ -433,5 +368,52 @@ form {
 #rsvp {
     border: none;
     font-family: Arial;
-    font-size: 32px;
+    font-size: 50px;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
+    -webkit-box-shadow: 0px 9px 0px #84261a;
+    -moz-box-shadow: 0px 9px 0px #84261a;
+    box-shadow: 0px 9px 0px #84261a;
+    border: solid 1px #D94E3B;
+    background: #cb3b27;
+}
+
+#rsvp:active {
+    -webkit-box-shadow: 0px 2px 0px #84261a;
+    -moz-box-shadow: 0px 2px 0px #84261a;
+    box-shadow: 0px 2px 0px #84261a;
+    position: relative;
+    top: 7px;
+}
+
+.navbar-default {
+    background-color: #404042;
+    border: none;
+}
+
+nav li {
+    display: block;
+    font-size: 2em;
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #aaa;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    color: white;
+    background-color: #404042;
+}
+
+.navbar {
+    border: none;
+    border-radius: 0px;
 }
