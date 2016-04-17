@@ -30,3 +30,13 @@ exports.rvspAccepted = function (name, email, phone, guests, food, g1, g2) {
         console.log(data);
     });
 };
+exports.remove = function (index) {
+    var parent = JSON.parse(fs.readFileSync('./rvsp.json'));
+    parent.rvsp.splice(index, 1);
+    fs.writeFile('./rvsp.json', JSON.stringify(parent), function (err, data) {
+        if (err) {
+            console.log(err);
+        }
+        console.log(data);
+    });
+}

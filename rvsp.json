@@ -1,3 +1,1 @@
-{
-    "rvsp": []
-}
+{"rvsp":[{"rvspName":"test1","rvspEmail":"a@a.n","rvspPhone":"123434","rvspGuests":"0","rvspFood":["Food 1","NA","NA"]},{"rvspName":"test2","rvspEmail":"s@d.f","rvspPhone":"12346","rvspGuests":"0","rvspFood":["Food 1","NA","NA"]},{"rvspName":"test3","rvspEmail":"f@q.p","rvspPhone":"3687985","rvspGuests":"0","rvspFood":["Food 1","NA","NA"]}]}

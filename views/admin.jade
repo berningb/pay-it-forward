@@ -6,9 +6,10 @@ html
         meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
         link(rel='stylesheet' href='table.css')
      body
-          div
+          div(class='container')
+            a(href="/logout" class='logout') Logout
             h1(class='header center title') RSVP Info
-            table(class='header')  
+            table(class='header')
                 thead
                     tr
                         th Name
@@ -18,12 +19,16 @@ html
                         th RSVP Person Food Choice
                         th 1st Guest Food Choice
                         th 2nd Guest Food Choice
+                        th 
                 tbody
-                    each r in rvsp.rvsp
+                    each r, i in rvsp.rvsp
                         tr
                             td #{r.rvspName}
                             td #{r.rvspEmail}
                             td #{r.rvspPhone}
                             td #{r.rvspGuests}
                             each f in r.rvspFood
-                                td #{f}                    
+                                td #{f} 
+                            td 
+                                a(href='/remove/#{i.toString()}' class='remove') Remove
+                                               

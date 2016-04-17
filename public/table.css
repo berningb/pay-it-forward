@@ -37,3 +37,30 @@ body {
     text-align: center;
     color: white;
 }
+
+.remove {
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #e74c3c;
+    color: white;
+}
+
+.logout {
+    float: right;
+    margin-right: calc((100% - 98%) / 2);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: sans-serif;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+}

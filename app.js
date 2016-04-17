@@ -45,15 +45,24 @@ app.post('/login', urlParser, function (req, res) {
         res.sendFile(path.join(__dirname + '/login.html'));
     }
 });
+app.get('/logout', function (req, res) {
+    req.session.destroy(function (err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("logged out");
+            res.redirect('/');
+        }
+    });
+});
+app.get('/remove/:id', accessChecker, function (req, res) {
+    hasher.remove(req.params.id);
+    res.redirect('/admin');
+});
 // viewed at http://localhost:8080/admin
 app.get('/admin', accessChecker, function (req, res) {
     res.render('admin', {
         rvsp: hasher.rvspInfo()
-    });
-    req.session.destroy(function (err) {
-        if (err) {
-            console.log(err);
-        }
     });
 });
 // viewed at http://localhost:8080/location
