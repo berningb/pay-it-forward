@@ -245,8 +245,8 @@ footer {
     vertical-align: middle;
     text-align: center;
     display: table-cell;
-    background-image: url(images/dog.jpg);
-    border-right: 4px solid black;
+/*    background-image: url(images/dog.jpg);
+    */    border-right: 4px solid black;
     border-bottom: 4px solid black;
 }
 
