@@ -89,132 +89,139 @@ $(document).ready(function (e) {
 ///******************
 // * = Gallery width *
 // ******************/
-//$(function () {
-//    var pause = 50; // will only process code within delay(function() { ... }) every 100ms.
-//    $(window).resize(function () {
-//        delay(function () {
-//                var gallery_images = $('#slide-3 img');
-//
-//                var images_per_row = 0;
-//                if (gallery_images.length % 2 == 0) {
-//                    images_per_row = gallery_images.length / 2;
-//                } else {
-//                    images_per_row = gallery_images.length / 2 + 1;
-//                }
-//
-//                var gallery_width = $('#slide-3 img').width() * $('#slide-3 img').length;
-//                gallery_width /= 2;
-//                if ($('#slide-3 img').length % 2 != 0) {
-//                    gallery_width += $('#slide-3 img').width();
-//                }
-//
-//                $('#slide-3 .row').css('width', gallery_width);
-//
-//                var left_pos = $('#slide-3 .row').width() - $('body').width();
-//                left_pos /= -2;
-//
-//                $('#slide-3 .row').css('left', left_pos);
-//
-//            },
-//            pause
-//        );
-//    });
-//    $(window).resize();
-//});
-//
-//var delay = (function () {
-//    var timer = 0;
-//    return function (callback, ms) {
-//        clearTimeout(timer);
-//        timer = setTimeout(callback, ms);
-//    };
-//})();
-//
-//function menu_focus(element, i) {
-//    if ($(element).hasClass('active')) {
-//        if (i == 6) {
-//            if ($('.navbar').hasClass('inv') == false)
-//                return;
-//        } else {
-//            return;
-//        }
-//    }
-//
-//    enable_arrows(i);
-//
-//    if (i == 1 || i == 6)
-//        $('.navbar').removeClass('inv');
-//    else
-//        $('.navbar').addClass('inv');
-//
-//    $('.nav > li').removeClass('active');
-//    $(element).addClass('active');
-//
-//    var icon = $(element).find('.icon');
-//
-//    var left_pos = icon.offset().left - $('.nav').offset().left;
-//    var el_width = icon.width() + $(element).find('.text').width() + 10;
-//
-//    $('.active-menu').stop(false, false).animate({
-//            left: left_pos,
-//            width: el_width
-//        },
-//        1500,
-//        'easeInOutQuart'
-//    );
-//}
-//
-//function enable_arrows(dataslide) {
-//    $('#arrows div').addClass('disabled');
-//    if (dataslide != 1) {
-//        $('#arrow-up').removeClass('disabled');
-//    }
-//    if (dataslide != 6) {
-//        $('#arrow-down').removeClass('disabled');
-//    }
-//    if (dataslide == 3) {
-//        $('#arrow-left').removeClass('disabled');
-//        $('#arrow-right').removeClass('disabled');
-//    }
-//}
+$(function () {
+    var pause = 50; // will only process code within delay(function() { ... }) every 100ms.
+    $(window).resize(function () {
+        delay(function () {
+                var gallery_images = $('#slide-3 img');
+
+                var images_per_row = 0;
+                if (gallery_images.length % 2 == 0) {
+                    images_per_row = gallery_images.length / 2;
+                } else {
+                    images_per_row = gallery_images.length / 2 + 1;
+                }
+
+                var gallery_width = $('#slide-3 img').width() * $('#slide-3 img').length;
+                gallery_width /= 2;
+                if ($('#slide-3 img').length % 2 != 0) {
+                    gallery_width += $('#slide-3 img').width();
+                }
+
+                $('#slide-3 .row').css('width', gallery_width);
+
+                var left_pos = $('#slide-3 .row').width() - $('body').width();
+                left_pos /= -2;
+
+                $('#slide-3 .row').css('left', left_pos);
+
+            },
+            pause
+        );
+    });
+    $(window).resize();
+});
+
+var delay = (function () {
+    var timer = 0;
+    return function (callback, ms) {
+        clearTimeout(timer);
+        timer = setTimeout(callback, ms);
+    };
+})();
+
+function menu_focus(element, i) {
+    if ($(element).hasClass('active')) {
+        if (i == 6) {
+            if ($('.navbar').hasClass('inv') == false)
+                return;
+        } else {
+            return;
+        }
+    }
+
+    enable_arrows(i);
+
+    if (i == 1 || i == 6)
+        $('.navbar').removeClass('inv');
+    else
+        $('.navbar').addClass('inv');
+
+    $('.nav > li').removeClass('active');
+    $(element).addClass('active');
+
+    var icon = $(element).find('.icon');
+
+    var left_pos = icon.offset().left - $('.nav').offset().left;
+    var el_width = icon.width() + $(element).find('.text').width() + 10;
+
+    $('.active-menu').stop(false, false).animate({
+            left: left_pos,
+            width: el_width
+        },
+        1500,
+        'easeInOutQuart'
+    );
+}
+
+function enable_arrows(dataslide) {
+    $('#arrows div').addClass('disabled');
+    if (dataslide != 1) {
+        $('#arrow-up').removeClass('disabled');
+    }
+    if (dataslide != 6) {
+        $('#arrow-down').removeClass('disabled');
+    }
+    if (dataslide == 3) {
+        $('#arrow-left').removeClass('disabled');
+        $('#arrow-right').removeClass('disabled');
+    }
+}
 
 /*************
  * = Parallax *
  *************/
-//jQuery(document).ready(function ($) {
-//            //Cache some variables
-//            var links = $('.nav').find('li');
-//            slide = $('.slide');
-//            button = $('.button');
-//            mywindow = $(window);
-//            htmlbody = $('html,body');
+jQuery(document).ready(function ($) {
+    //Cache some variables
+    var links = $('.nav').find('li');
+    slide = $('.slide');
+    button = $('.button');
+    mywindow = $(window);
+    htmlbody = $('html,body');
 
-//Create a function that will be passed a slide number and then will scroll to that slide using jquerys animate. The Jquery
-//easing plugin is also used, so we passed in the easing method of 'easeInOutQuint' which is available throught the plugin.
-//	function goToByScroll(dataslide) {
-//		var offset_top = ( dataslide == 1 ) ? '0px' : $('.slide[data-slide="' + dataslide + '"]').offset().top;
-//		
-//		htmlbody.stop(false, false).animate({
-//			scrollTop: offset_top
-//		}, 1500, 'easeInOutQuart');
-//	}
+    Create a
 
-//When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
-//	links.click(function (e) {
-//		e.preventDefault();
-//		dataslide = $(this).attr('data-slide');
-//		goToByScroll(dataslide);
-//		$(".nav-collapse").collapse('hide');
-//	});
+    function that will be passed a slide number and then will scroll to that slide using jquerys animate.The Jquery
+    easing plugin is also used, so we passed in the easing method of 'easeInOutQuint'
+    which is available throught the plugin.
+    function goToByScroll(dataslide) {
+        var offset_top = (dataslide == 1) ? '0px' : $('.slide[data-slide="' + dataslide + '"]').offset().top;
 
-//When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
-//	$('.navigation-slide').click(function (e) {
-//		e.preventDefault();
-//		dataslide = $(this).attr('data-slide');
-//		goToByScroll(dataslide);
-//		$(".nav-collapse").collapse('hide');
-//	});
-//});
+        htmlbody.stop(false, false).animate({
+            scrollTop: offset_top
+        }, 1500, 'easeInOutQuart');
+    }
+
+    When the user clicks on the navigation links, get the data - slide attribute value of the link and pass that variable to the goToByScroll
+
+    function
+    links.click(function (e) {
+        e.preventDefault();
+        dataslide = $(this).attr('data-slide');
+        goToByScroll(dataslide);
+        $(".nav-collapse").collapse('hide');
+    });
+
+    When the user clicks on the navigation links, get the data - slide attribute value of the link and pass that variable to the goToByScroll
+
+    function
+    $('.navigation-slide').click(function (e) {
+        e.preventDefault();
+        dataslide = $(this).attr('data-slide');
+        goToByScroll(dataslide);
+        $(".nav-collapse").collapse('hide');
+    });
+});
 
 /***************
  * = Menu hover *
@@ -243,39 +250,39 @@ jQuery(document).ready(function ($) {
     );
 });
 
-///******************
-// * = Gallery hover *
-// ******************/
-//jQuery(document).ready(function ($) {
-//    //Cache some variables
-//    var images = $('#slide-3 a');
-//
-//    images.hover(
-//        function (e) {
-//            var asta = $(this).find('img');
-//            $('#slide-3 img').not(asta).stop(false, false).animate({
-//                    opacity: .5
-//                },
-//                'fast',
-//                'linear'
-//            );
-//            var zoom = $('<div class="zoom"></div>');
-//            if ($(this).hasClass('video')) {
-//                zoom.addClass('video');
-//            }
-//            $(this).prepend(zoom);
-//        },
-//        function (e) {
-//            $('#slide-3 img').stop(false, false).animate({
-//                    opacity: 1
-//                },
-//                'fast',
-//                'linear'
-//            );
-//            $('.zoom').remove();
-//        }
-//    );
-//});
+/******************
+ * = Gallery hover *
+ ******************/
+jQuery(document).ready(function ($) {
+    //Cache some variables
+    var images = $('#slide-3 a');
+
+    images.hover(
+        function (e) {
+            var asta = $(this).find('img');
+            $('#slide-3 img').not(asta).stop(false, false).animate({
+                    opacity: .5
+                },
+                'fast',
+                'linear'
+            );
+            var zoom = $('<div class="zoom"></div>');
+            if ($(this).hasClass('video')) {
+                zoom.addClass('video');
+            }
+            $(this).prepend(zoom);
+        },
+        function (e) {
+            $('#slide-3 img').stop(false, false).animate({
+                    opacity: 1
+                },
+                'fast',
+                'linear'
+            );
+            $('.zoom').remove();
+        }
+    );
+});
 //
 ///******************
 // * = Arrows click  *
