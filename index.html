@@ -1,181 +1,367 @@
-<!DOCTYPE html>
-<html lang="">
+<!doctype html>
+<html>
 
-<head>
+<head lang="en">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>MUNTER - Free Bootstrap 3 One Page Theme</title>
+    <meta name="description" content="BlackTie.co - Free Handsome Bootstrap Themes" />
+    <meta name="keywords" content="themes, bootstrap, free, templates, bootstrap 3, freebie,">
+    <meta property="og:title" content="">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+    <link rel="prefetch" href="images/zoom.png">
+
 </head>
 
 <body>
+    <div class="navbar navbar-fixed-top" data-activeslide="1">
+        <div class="container">
+
+            <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
 
+            <div class="nav-collapse collapse navbar-responsive-collapse">
+                <ul class="nav row">
+                    <li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1" title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a>
+                    </li>
+                    <li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-4" title="Next Section"><span class="icon icon-user"></span> <span class="text">About</span></a>
+                    </li>
+                    <li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#slide-5" title="Next Section"><span class="icon icon-location-arrow"></span> <span class="text">Location</span></a>
+                    </li>
+                    <li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-envelope"></span> <span class="text">CONTACT</span></a>
+                    </li>
+                </ul>
+                <div class="row">
+                    <div class="col-sm-2 active-menu"></div>
+                </div>
+            </div>
+            <!-- /.nav-collapse -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.navbar -->
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
 
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home <span class="fa fa-home"></span><span class="sr-only">(current)</span></a>
-                        </li>
-                        <li><a href="/location">Location  <span class="fa fa-thumb-tack"></span></a>
-                        </li>
-                        <li><a href="#contact">Contact  <span class="fa fa-question-circle-o"></span></a>
-                        </li>
-                    </ul>
+    <!-- === Arrows === -->
+    <div id="arrows">
+        <div id="arrow-up" class="disabled"></div>
+        <div id="arrow-down"></div>
+        <div id="arrow-left" class="disabled visible-lg"></div>
+        <div id="arrow-right" class="disabled visible-lg"></div>
+    </div>
+    <!-- /.arrows -->
+
+
+    <!-- Modal --->
+    <div id="marg">
+        <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">RSVP</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/" id="rsvpform" method="post">
+                            <fieldset class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="First Last" name="name">
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="phone" class="form-control" id="phone" placeholder="(888)-555-5555" name="phone">
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <label for="guests">Number of Guests</label>
+                                <select class="form-control" id="guests" name="guests">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <label for="food">Food Choice</label>
+                                <select class="form-control" id="food" name="food">
+                                    <option>Food 1</option>
+                                    <option>Food 2</option>
+                                    <option>Food 3</option>
+                                </select>
+
+                            </fieldset>
+                            <fieldset class="form-group" id="guestsfood">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="rsvpbtn">SUBMIT</button>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </nav>
-
-    <header id="begin">
-        <div class="full header txt-red">
-            <div class="header-title">
-                <h2>Hillcrest High</h2>
-                <h1>Class of '66 Reunion</h1>
-
+        <!-- /.modal -->
+    </div>
+    <!-- === MAIN Background === -->
+    <div class="slide story" id="slide-1" data-slide="1">
+        <div class="container">
+            <div id="home-row-1" class="row clearfix">
+                <div class="col-12">
+                    <h1 class="font-semibold">Hillcrest HighSchool <span class="font-thin">Class of '66 Reunion</span></h1>
+                    <h1 class="font-thin">Come Join Us <span class="font-semibold">September 9th</span> at the Cottonwood Country Club.</h1>
+                    <br>
+                    <br>
+                </div>
+                <!-- /col-12 -->
             </div>
+            <!-- /row -->
             <button type="button" class="btn btn-primary btn-lg" id="rsvp" data-toggle="modal" data-target="#myModal">
                 RSVP HERE
             </button>
-
-            <!--            <div id="rights">photo by Alisson Douglas</div>-->
+            <!-- /row -->
         </div>
-    </header>
-
-    <div class="container-fluid con">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8  video">
-                <div id="theVid">
-                    <video width="760" height="515" src="" frameborder="0" allowfullscreen controls></video>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 text">
-                <div id="everything">
-                    <div id="head">
-                        <div id="flower">
-                            <img src="images/flow.png" height="226" width="335">
-                        </div>
-                    </div>
-                    <div id="textHold">
-                        <p>
-                            Come join us at the Cottonwood Country Club on <strong>September 9th</strong> and catch up with all your former classmates. There will be dancing and other activities. Dinner will be provided at the country club.
-                        </p>
-                    </div>
-                    <div id="marg">
-                        <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                                        </button>
-                                        <h4 class="modal-title">RSVP</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="/" id="rsvpform" method="post">
-                                            <fieldset class="form-group">
-                                                <label for="name">Name</label>
-                                                <input type="text" class="form-control" id="name" placeholder="First Last" name="name">
-                                            </fieldset>
-                                            <fieldset class="form-group">
-                                                <label for="email">Email Address</label>
-                                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                                            </fieldset>
-                                            <fieldset class="form-group">
-                                                <label for="phone">Phone</label>
-                                                <input type="phone" class="form-control" id="phone" placeholder="(888)-555-5555" name="phone">
-                                            </fieldset>
-                                            <fieldset class="form-group">
-                                                <label for="guests">Number of Guests</label>
-                                                <select class="form-control" id="guests" name="guests">
-                                                    <option>0</option>
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                </select>
-                                            </fieldset>
-                                            <fieldset class="form-group">
-                                                <label for="food">Food Choice</label>
-                                                <select class="form-control" id="food" name="food">
-                                                    <option>Food 1</option>
-                                                    <option>Food 2</option>
-                                                    <option>Food 3</option>
-                                                </select>
-
-                                            </fieldset>
-                                            <fieldset class="form-group" id="guestsfood">
-                                            </fieldset>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary" id="rsvpbtn">SUBMIT</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.modal -->
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- /container -->
     </div>
-    <footer>
+    <!-- /slide1 -->
 
-        <div class="cont" id="contact">
-            <ul class="contact">
-                <li style="text-align: left;">
-                    <p><i class="fa fa-map-marker fa-3x"></i>
-                    </p>
-                    <p><strong>Location</strong>
-                        <br>555S sixth ave</p>
-                </li>
-                <li style="text-align: left;">
-                    <p><i class="fa fa-phone fa-3x"></i>
-                    </p>
-                    <p><strong>Telephone:</strong>
-                        <br>(555) 555-5555</p>
-                </li>
-                <li style="text-align: left;">
-                    <p><i class="fa fa-envelope fa-3x"></i>
-                    </p>
-                    <p><strong>E-mail:</strong>
-                        <br>someemail@email.com</p>
-                </li>
-            </ul>
 
+    <!-- === Slide 4 - Process === -->
+    <div class="slide story" id="slide-4" data-slide="4">
+        <div class="container">
+            <div class="row title-row">
+                <div class="col-12 font-thin">Class of 1966
+                </div>
+            </div>
+            <!-- /row -->
+            <div class="row line-row">
+                <div class="hr">&nbsp;</div>
+            </div>
+            <!-- /row -->
+            <div class="row subtitle-row">
+                <div class="col-sm-1 hidden-sm">&nbsp;</div>
+                <div class="col-12 col-sm-10 font-light">Come join us on <strong>September 9th</strong> at the <strong>Cottonwood Country Club </strong>to catch up with former classmates.</div>
+                <div class="col-sm-1 hidden-sm">&nbsp;</div>
+            </div>
+            <!-- /row -->
+            <div class="row content-row">
+
+            </div>
+            <!-- /row -->
         </div>
+        <!-- /container -->
+    </div>
+    <!-- /slide4 -->
 
 
-        <!--        <div>Credits to <a href='http://www.freepik.com/free-vector/ornamental-frames_805170.htm'> Freepik</a></div>-->
-    </footer>
+    <!-- === SLide 3 - Portfolio -->
+    <div class="slide story" id="slide-3" data-slide="3">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-2">
+                <a data-fancybox-group="portfolio" class="fancybox" href="images/PayReunion/12.png"><img class="thumb" src="images/PayReunion/12.png" alt="">
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2">
+                <a data-fancybox-group="portfolio" class="fancybox" href="images/PayReunion/11.png"><img class="thumb" src="images/PayReunion/11.png" alt="">
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2">
+                <a data-fancybox-group="portfolio" class="fancybox" href="images/PayReunion/10.png"><img class="thumb" src="images/PayReunion/10.png" alt="">
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2">
+                <a data-fancybox-group="portfolio" class="fancybox" href="images/PayReunion/9.png"><img class="thumb" src="images/PayReunion/9.png" alt="">
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2">
+                <a data-fancybox-group="portfolio" class="fancybox" href="images/PayReunion/8.png"><img class="thumb" src="images/PayReunion/8.png" alt="">
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2">
+                <a data-fancybox-group="portfolio" class="fancybox" href="images/PayReunion/7.png"><img class="thumb" src="images/PayReunion/7.png" alt="">
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2">
+                <a data-fancybox-group="portfolio" class="fancybox" href="images/PayReunion/6.png"><img class="thumb" src="images/PayReunion/6.png" alt="">
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2">
+                <a data-fancybox-group="portfolio" class="fancybox" href="images/PayReunion/5.png"><img class="thumb" src="images/PayReunion/5.png" alt="">
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2">
+                <a data-fancybox-group="portfolio" class="fancybox" href="images/PayReunion/4.png"><img class="thumb" src="images/PayReunion/4.png" alt="">
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2">
+                <a data-fancybox-group="portfolio" class="fancybox" href="images/PayReunion/3.png"><img class="thumb" src="images/PayReunion/3.png" alt="">
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2">
+                <a data-fancybox-group="portfolio" class="fancybox" href="images/PayReunion/2.png"><img class="thumb" src="images/PayReunion/2.png" alt="">
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2">
+                <a data-fancybox-group="portfolio" class="fancybox" href="images/PayReunion/1.png"><img class="thumb" src="images/PayReunion/1.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /slide3 -->
 
 
 
+    <!-- === Slide 5 === -->
+    <div class="slide story" id="slide-5" data-slide="5">
+        <div class="container">
+            <div class="row title-row">
+                <div class="col-12 font-thin"><span class="font-semibold">Clients</span> we’ve worked with</div>
+            </div>
+            <!-- /row -->
+            <div class="row line-row">
+                <div class="hr">&nbsp;</div>
+            </div>
+            <!-- /row -->
+            <div class="row subtitle-row">
+                <div class="col-sm-1 hidden-sm">&nbsp;</div>
+                <div class="col-12 col-sm-10 font-light">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                    <br/>
+                    <br/> The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero.</div>
+                <div class="col-sm-1 hidden-sm">&nbsp;</div>
+            </div>
+            <!-- /row -->
+            <div class="row content-row">
+                <div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
+                <div class="col-12 col-sm-2"><img src="images/client01.png" alt="">
+                </div>
+                <div class="col-12 col-sm-2"><img src="images/client02.png" alt="">
+                </div>
+                <div class="col-12 col-sm-2"><img src="images/client03.png" alt="">
+                </div>
+                <div class="col-12 col-sm-2"><img src="images/client04.png" alt="">
+                </div>
+                <div class="col-12 col-sm-2"><img src="images/client05.png" alt="">
+                </div>
+                <div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /slide5 -->
 
+    <!-- === Slide 6 / Contact === -->
+    <div class="slide story" id="slide-6" data-slide="6">
+        <div class="container">
+            <div class="row title-row">
+                <div class="col-12 font-light">Leave us a <span class="font-semibold">message</span>
+                </div>
+            </div>
+            <!-- /row -->
+            <div class="row line-row">
+                <div class="hr">&nbsp;</div>
+            </div>
+            <!-- /row -->
+            <div class="row subtitle-row">
+                <div class="col-sm-1 hidden-sm">&nbsp;</div>
+                <div class="col-12 col-sm-10 font-light">You can find us literally anywhere, just push a button and we’re there</div>
+                <div class="col-sm-1 hidden-sm">&nbsp;</div>
+            </div>
+            <!-- /row -->
+            <div id="contact-row-4" class="row">
+                <div class="col-sm-1 hidden-sm">&nbsp;</div>
+                <div class="col-12 col-sm-2 with-hover-text">
+                    <p><a target="_blank" href="#"><i class="icon icon-phone"></i></a>
+                    </p>
+                    <span class="hover-text font-light ">+44 4839-4343</span>
+                    </a>
+                </div>
+                <!-- /col12 -->
+                <div class="col-12 col-sm-2 with-hover-text">
+                    <p><a target="_blank" href="#"><i class="icon icon-envelope"></i></a>
+                    </p>
+                    <span class="hover-text font-light ">munter@blacktie.co</span>
+                    </a>
+                </div>
+                <!-- /col12 -->
+                <div class="col-12 col-sm-2 with-hover-text">
+                    <p><a target="_blank" href="#"><i class="icon icon-home"></i></a>
+                    </p>
+                    <span class="hover-text font-light ">London, England<br>zip code 98443</span>
+                    </a>
+                </div>
+                <!-- /col12 -->
+                <div class="col-12 col-sm-2 with-hover-text">
+                    <p><a target="_blank" href="#"><i class="icon icon-facebook"></i></a>
+                    </p>
+                    <span class="hover-text font-light ">facebook/blacktie_co</span>
+                    </a>
+                </div>
+                <!-- /col12 -->
+                <div class="col-12 col-sm-2 with-hover-text">
+                    <p><a target="_blank" href="#"><i class="icon icon-twitter"></i></a>
+                    </p>
+                    <span class="hover-text font-light ">@BlackTie_co</span>
+                    </a>
+                </div>
+                <!-- /col12 -->
+                <div class="col-sm-1 hidden-sm">&nbsp;</div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /Slide 6 -->
 
-
-
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="foodscript.js"></script>
 </body>
+
+<!-- SCRIPTS -->
+<script src="js/html5shiv.js"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="fancybox/jquery.fancybox.pack-v=2.1.5.js"></script>
+<script src="js/script.js"></script>
+<script src="js/foodscript.js"></script>
+
+
+<!-- fancybox init -->
+<script>
+    $(document).ready(function (e) {
+        var lis = $('.nav > li');
+        menu_focus(lis[0], 1);
+
+        $(".fancybox").fancybox({
+            padding: 10,
+            helpers: {
+                overlay: {
+                    locked: false
+                }
+            }
+        });
+
+    });
+</script>
 
 </html>
