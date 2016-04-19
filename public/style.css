@@ -120,7 +120,7 @@ body {
 }
 
 .header-title h1 {
-    font-size: 5em;
+    font-size: 6em;
     text-transform: uppercase;
 }
 
@@ -131,7 +131,7 @@ body {
     /*    font-style: oblique;
     */
     
-    font-size: 3.5em;
+    font-size: 5em;
     overflow: hidden;
     margin: -30px -33px 0 -33px;
     position: absolute;
@@ -163,7 +163,7 @@ body {
     color: #1F3F1C;
     /*    font-family: 'Bevan', cursive;*/
     
-    font-family: Arial;
+    font-family: sans-serif;
 }
 
 .container {
@@ -245,8 +245,10 @@ footer {
     vertical-align: middle;
     text-align: center;
     display: table-cell;
-/*    background-image: url(images/dog.jpg);
-    */    border-right: 4px solid black;
+    /*    background-image: url(images/dog.jpg);
+    */
+    
+    border-right: 4px solid black;
     border-bottom: 4px solid black;
 }
 
@@ -261,6 +263,7 @@ footer {
     display: table;
     height: 300px;
     margin-top: 50px;
+    font-size: 1.5em;
 }
 
 #everything {
@@ -283,7 +286,7 @@ footer {
     font-size: 1.5em;
     width: 70%;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 #head {
@@ -420,4 +423,17 @@ nav li {
 
 video {
     background-color: black;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        width: 100%;
+    }
+    #textHold {
+        font-size: 1.2em;
+    }
+}
+
+strong {
+    text-decoration: underline;
 }
