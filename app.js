@@ -65,15 +65,6 @@ app.get('/admin', accessChecker, function (req, res) {
         rvsp: hasher.rvspInfo()
     });
 });
-// viewed at http://localhost:8080/location
-app.get('/location', function (req, res) {
-    res.sendFile(path.join(__dirname + '/location.html'));
-});
-// viewed at http://localhost:8080/events
-app.get('/completed', function (req, res) {
-    res.sendFile(path.join(__dirname + '/completed.html'));
-});
-
 app.post('/', urlParser, function (req, res) {
     var guest1 = "NA";
     var guest2 = "NA";
